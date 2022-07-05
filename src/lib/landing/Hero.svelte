@@ -21,7 +21,7 @@ import HeroCarousel from "./HeroCarousel.svelte";
     images={carouselImages}
     duration={3000}
   />
-  <div class="absolute top-0 left-0 right-0 bottom-0 flex flex-col items-center justify-center text-white" style="z-index: 3;">
+  <div class="absolute top-0 left-0 right-0 bottom-0 flex flex-col items-center justify-center text-white">
     <h1 class="text-5xl">Order Today, While It's Hot!</h1>
     <h2 class="text-xl">Eat Delicious & Tasty Fast-Foods With Real Flavours</h2>
     <a
