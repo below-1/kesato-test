@@ -1,31 +1,69 @@
 <script lang="ts">
-  import { fade } from 'svelte/transition';
+  import { createEventDispatcher } from 'svelte';
+  import { scale } from 'svelte/transition'
   import Icon, { addIcon } from '@iconify/svelte';
   import biSearch from '@iconify/icons-bi/search';
+
+  const dispatch = createEventDispatcher();
+
   addIcon('search', biSearch);
 
-  let inputVisible = false;
+  export let inputVisible = false;
+  export let placeholder = '';
 
   function showInput() {
-    inputVisible = true;
+    dispatch('input-visible');
   }
 
   function hideInput() {
-    inputVisible = false;
+    dispatch('input-hidden');
+  }
+
+  function toggleInput() {
+    if (inputVisible) {
+      hideInput();
+    } else {
+      showInput();
+    }
   }
 </script>
 
-{#if inputVisible}
-  <input
-    class="bg-ksblack-aug py-2 px-3 text-xl font-bold text-white"
-    on:focusout={hideInput}
-  />
-{:else}
+<style>
+  .SearchInput {
+    flex-basis: 0px;
+    flex-grow: 0;
+    flex-shrink: 1;
+    min-width: 0;
+    width: 0;
+    box-sizing: content-box;
+    overflow: hidden;
+  }
+  .SearchInput.Show {
+    flex-basis: 100%;
+    flex-grow: 1;
+  }
+
+  .SearchInput.Show input {
+    @apply bg-ksred-aug;
+  }
+</style>
+
+<div class="flex grow items-center justify-end px-2 gap-x-2">
+  <div 
+    class="SearchInput grow transition-all "
+    class:Show={inputVisible}
+  >
+    <input
+      class="bg-ksblack-aug py-2 px-3 text-xl font-bold text-white w-full transition-all"
+      on:focusout={hideInput}
+      {placeholder}
+    />
+  </div>
   <button
     type="button"
-    class="text-white hover:bg-ksblack-aug focus:bg-ksblack-aug p-2 rounded-full transition-all text-gray-100"
-    on:click={showInput}
+    class="SearchButton text-white hover:bg-ksblack-aug focus:bg-ksblack-aug p-2 rounded-full text-gray-100 transition-all"
+    on:click={toggleInput}
   >
     <Icon icon="search" class="h-4 w-4" />
   </button>
-{/if}
+</div>
