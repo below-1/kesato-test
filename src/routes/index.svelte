@@ -1,5 +1,6 @@
 <script lang="ts">
 	import Counter from '$lib/Counter.svelte';
+import Hero from '$lib/landing/Hero.svelte';
 	import NavBar from '$lib/landing/NavBar.svelte';
 </script>
 
@@ -9,6 +10,7 @@
 </svelte:head>
 
 <NavBar/>
+<Hero/>
 <section>
 	<h1>
 		<span class="welcome">
