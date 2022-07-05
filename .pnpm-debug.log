@@ -1,0 +1,23 @@
+{
+  "0 debug pnpm:scope": {
+    "selected": 1
+  },
+  "1 info pnpm": {
+    "err": {
+      "name": "Error",
+      "message": "not found: svelte-add@latest",
+      "code": "ENOENT",
+      "stack": "Error: not found: svelte-add@latest\n    at getNotFoundError (/snapshot/dist/pnpm.cjs)\n    at Function.whichSync [as sync] (/snapshot/dist/pnpm.cjs)\n    at getCommandAbsolutePathSync (/snapshot/dist/pnpm.cjs)\n    at default_1 (/snapshot/dist/pnpm.cjs)\n    at /snapshot/dist/pnpm.cjs"
+    }
+  },
+  "2 error pnpm": {
+    "code": "ERR_PNPM_RECURSIVE_EXEC_FIRST_FAIL",
+    "prefix": "/home/below-1/projects/kesato",
+    "err": {
+      "name": "pnpm",
+      "message": "not found: svelte-add@latest",
+      "code": "ERR_PNPM_RECURSIVE_EXEC_FIRST_FAIL",
+      "stack": "Error: not found: svelte-add@latest\n    at getNotFoundError (/snapshot/dist/pnpm.cjs)\n    at Function.whichSync [as sync] (/snapshot/dist/pnpm.cjs)\n    at getCommandAbsolutePathSync (/snapshot/dist/pnpm.cjs)\n    at default_1 (/snapshot/dist/pnpm.cjs)\n    at /snapshot/dist/pnpm.cjs"
+    }
+  }
+}
