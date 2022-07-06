@@ -3,4 +3,6 @@
 	import '../app.css';
 </script>
 
-<slot></slot>
+<main class="font-body">
+	<slot></slot>
+</main>

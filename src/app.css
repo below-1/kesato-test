@@ -1,9 +1,17 @@
 /* Write your global styles here, in PostCSS syntax */
 
-@import "@fontsource/fira-mono";
-
 @tailwind base;
 @tailwind components;
+
+@font-face {
+  font-family: 'KaushanScript';
+  src: url(/fonts/KaushanScript-Regular.woff) format('woff');
+}
+@font-face {
+  font-family: 'OpenSans';
+  src: url(/fonts/OpenSans-Regular.woff) format('woff');
+}
+
 @tailwind utilities;
 
 /* Make styling svg easier */
@@ -15,4 +23,8 @@ svg {
 /* Apply augmented color for outline */
 input:focus, button:focus, a:focus {
   @apply outline outline-2 outline-ksred-aug;
+}
+
+.Container {
+  @apply px-6 md:mx-auto md:w-4/5;
 }

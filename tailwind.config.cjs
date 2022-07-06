@@ -9,6 +9,10 @@ const config = {
         ksred: '#ff0000',
         'ksred-aug': '#c60000',
         ksgreen: '#65c800'
+      },
+      fontFamily: {
+        display: ["KaushanScript", "san-serif"],
+        body:  ["OpenSans", "sans"]
       }
     },
   },
