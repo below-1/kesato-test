@@ -41,19 +41,19 @@
     right: 0;
     top: -10%;
     background: url(/img/pages/home/decor-features.png);
-    background-position: 120% 1%;
-    background-size: contain;
+    background-position: 121% 1%;
+    background-size: 30% 100%;
     background-repeat: no-repeat;
   }
 </style>
 
-<div class="Features mb-64">
+<div class="Features">
   <div 
     class="Container py-24 flex justify-start"
   >
     {#each features as feat}
       <div class="w-1/3 flex flex-col justify-between leading-none">
-        <img src={feat.icon} alt="feature-icon" class="h-24 self-start mb-3">
+        <img src={feat.icon} alt="feature-icon" class="h-24 self-start mb-4">
         <img 
           src='/img/decor/wawe.svg' 
           alt="waves" 
