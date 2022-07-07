@@ -11,7 +11,7 @@ import DealsCollection from './DealsCollection.svelte';
 
   onMount(() => {
     intervalId = setInterval(() => {
-      // activeTabIndex = (activeTabIndex + 1) % MenuTypeOptions.length;
+      activeTabIndex = (activeTabIndex + 1) % MenuTypeOptions.length;
     }, changeDuration)
   })
 
