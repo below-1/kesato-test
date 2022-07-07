@@ -49,7 +49,7 @@
 
 <div class="Features">
   <div 
-    class="Container py-24 flex justify-start"
+    class="Container SmallSection flex justify-start items-center"
   >
     {#each features as feat}
       <div class="w-1/3 flex flex-col justify-between leading-none">

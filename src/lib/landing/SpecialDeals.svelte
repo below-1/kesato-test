@@ -30,7 +30,7 @@ import DealsCollection from './DealsCollection.svelte';
 </style>
 
 <div class="bg-ksblack">
-  <div class="Container flex flex-col items-center justify-center text-white py-24">
+  <div class="Container BigSection flex flex-col items-center justify-start text-white pt-24">
     <img
       src="/img/decor/french-fries.png"
       alt="french fries"
