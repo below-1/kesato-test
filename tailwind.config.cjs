@@ -6,6 +6,7 @@ const config = {
       colors: {
         ksblack: '#211e1e',
         'ksblack-aug': '#1c0c0c',
+        'ksblack-bri': '#2a2828',
         ksred: '#ff0000',
         'ksred-aug': '#c60000',
         ksgreen: '#65c800'
