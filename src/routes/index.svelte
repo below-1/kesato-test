@@ -5,6 +5,7 @@ import Features from '$lib/landing/Features.svelte';
 import Hero from '$lib/landing/Hero.svelte';
 	import NavBar from '$lib/landing/NavBar.svelte';
 import SpecialDeals from '$lib/landing/SpecialDeals.svelte';
+import Steps from '$lib/landing/Steps.svelte';
 </script>
 
 <svelte:head>
@@ -18,4 +19,5 @@ import SpecialDeals from '$lib/landing/SpecialDeals.svelte';
 	<About/>
 	<Features/>
 	<SpecialDeals />
+	<Steps/>
 </div>

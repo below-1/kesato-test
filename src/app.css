@@ -11,6 +11,16 @@
   font-family: 'OpenSans';
   src: url(/fonts/OpenSans-Regular.woff) format('woff');
 }
+@font-face {
+  font-family: 'OpenSans';
+  font-weight: bold;
+  src: url(/fonts/OpenSans-Bold.woff) format('woff');
+}
+@font-face {
+  font-family: 'OpenSans';
+  font-weight: 300;
+  src: url(/fonts/OpenSans-Light.woff) format('woff');
+}
 
 @tailwind utilities;
 
@@ -27,4 +37,20 @@ input:focus, button:focus, a:focus {
 
 .Container {
   @apply px-6 md:mx-auto md:w-4/5;
+}
+
+.VhSection {
+  min-height: 100vh;
+}
+
+.SmallSection {
+  min-height: 500px;
+}
+
+.MediumSection {
+  min-height: 700px;
+}
+
+.BigSection {
+  min-height: 1000px;
 }
