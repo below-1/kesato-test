@@ -1,5 +1,6 @@
 <script lang="ts">
 	import About from '$lib/landing/About.svelte';
+import Banners from '$lib/landing/Banners.svelte';
 	import Features from '$lib/landing/Features.svelte';
 	import Hero from '$lib/landing/Hero.svelte';
 	import NavBar from '$lib/landing/NavBar.svelte';
@@ -24,6 +25,8 @@ import type { PostMetaData } from 'src/types';
 	<SpecialDeals />
 	<Steps/>
 	<Recommended 
+	/>
+	<Banners
 		{highlightPost}
 	/>
 </div>

@@ -1,14 +1,11 @@
 <script lang="ts">
   import { onMount, onDestroy } from "svelte";
   import { fly } from "svelte/transition";
-  import type { PostMetaData, Recommended } from "src/types";
+  import type { Recommended } from "src/types";
   import { page } from "$app/stores";
-  import Banner from "./Banner.svelte";
   import CarouselIndicator from "$lib/CarouselIndicator.svelte";
 
   export let totalItems = 6;
-  export let highlightPost: PostMetaData;
-  $: postUrl = `/posts/${highlightPost.id}`;
   const per_page = 3;
   let parts: Array<Array<Recommended> | null> = Array(totalItems).fill(null);
   let activeIndex = 0;
@@ -47,7 +44,7 @@
 </script>
 
 <div class="bg-ksblack text-white">
-  <div class="Container BigSection flex flex-col items-center justify-start py-24">
+  <div class="Container MediumSection flex flex-col items-center justify-start pt-24">
     <img
       src="/img/decor/french-fries.png"
       alt="french fries"
@@ -68,7 +65,7 @@
             out:fly={{ y: 0, x: -200 }}
           >
             {#each part as item}
-              <div class="w-1/3 flex flex-col">
+              <div class="w-full md:w-1/3 flex flex-col">
                 <img 
                   src={item.photo}
                   alt="recommended menu"
@@ -92,19 +89,10 @@
       {/each}
     </div>
 
-    <div class="py-12">
+    <div class="">
       <CarouselIndicator
         nItems={parts.length}
         {activeIndex}
-      />
-    </div>
-    <div class="md:w-1/2 flex">
-      <Banner
-        title={highlightPost.title}
-        subtitle={highlightPost.subtitle}
-        actionLabel='Baca Selengkapnya'
-        url={postUrl}
-        image={highlightPost.photo}
       />
     </div>
   </div>
