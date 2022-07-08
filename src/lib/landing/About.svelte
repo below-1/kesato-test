@@ -22,7 +22,7 @@
 <div class="About overflow-hidden w-full relative bg-ksblack text-white">
   <div class="ClippedBanner">
   </div>
-  <div class="Content MidSection flex items-center">
+  <div class="Content VhSection flex items-center">
 
     <div class="Container flex flex-wrap justify-center">
       <div class="md:w-1/2" style="background: url(/img/pages/home/img-about.png); background-size: contain; background-repeat: no-repeat; background-position: 60% 50%;">
