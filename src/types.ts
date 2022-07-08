@@ -14,3 +14,23 @@ export type Menu = {
   avatar: string;
   photo: string;
 }
+
+export type Recommended = {
+  id: string;
+  rating: number;
+  name: string;
+  description: string;
+  price: number;
+  photo: string;
+}
+
+export type PostMetaData = {
+  id: string;
+  title: string;
+  subtitle: string;
+  createdAt: string;
+  thumbnail: string;
+  photo: string;
+}
+
+export type PostContent = Array<string>;

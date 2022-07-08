@@ -1,11 +1,14 @@
 <script lang="ts">
-	import Counter from '$lib/Counter.svelte';
-import About from '$lib/landing/About.svelte';
-import Features from '$lib/landing/Features.svelte';
-import Hero from '$lib/landing/Hero.svelte';
+	import About from '$lib/landing/About.svelte';
+	import Features from '$lib/landing/Features.svelte';
+	import Hero from '$lib/landing/Hero.svelte';
 	import NavBar from '$lib/landing/NavBar.svelte';
-import SpecialDeals from '$lib/landing/SpecialDeals.svelte';
-import Steps from '$lib/landing/Steps.svelte';
+	import Recommended from '$lib/landing/Recommended.svelte';
+	import SpecialDeals from '$lib/landing/SpecialDeals.svelte';
+	import Steps from '$lib/landing/Steps.svelte';
+import type { PostMetaData } from 'src/types';
+
+	export let highlightPost: PostMetaData;
 </script>
 
 <svelte:head>
@@ -20,4 +23,7 @@ import Steps from '$lib/landing/Steps.svelte';
 	<Features/>
 	<SpecialDeals />
 	<Steps/>
+	<Recommended 
+		{highlightPost}
+	/>
 </div>
