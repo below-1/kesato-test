@@ -2,6 +2,7 @@
   import { onDestroy, onMount } from "svelte";
   import { slide, fade, fly } from 'svelte/transition'
   import { browser } from "$app/env";
+  import CarouselIndicator from "$lib/CarouselIndicator.svelte";
 
   export let images: Array<string> = [];
   export let duration: number = 300;
@@ -42,12 +43,9 @@
   {/if}
 {/each}
 
-<div class="absolute flex items-center justify-center gap-4 h-24" style="bottom: 0; left: 0; right: 0;">
-  {#each images as img, idx}
-    {#if activeIndex == idx}
-      <div class="w-6 h-2 rounded-lg bg-ksgreen"></div>
-    {:else}
-      <div class="w-2 h-2 rounded-lg bg-white"></div>
-    {/if}
-  {/each}
+<div class="absolute" style="bottom: 0; left: 0; right: 0;">
+  <CarouselIndicator 
+    nItems={images.length}
+    {activeIndex}
+  />
 </div>

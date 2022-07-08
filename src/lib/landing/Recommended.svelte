@@ -4,8 +4,9 @@
   import type { PostMetaData, Recommended } from "src/types";
   import { page } from "$app/stores";
   import Banner from "./Banner.svelte";
+  import CarouselIndicator from "$lib/CarouselIndicator.svelte";
 
-  export let totalItems = 15;
+  export let totalItems = 6;
   export let highlightPost: PostMetaData;
   $: postUrl = `/posts/${highlightPost.id}`;
   const per_page = 3;
@@ -34,7 +35,7 @@
 
   onMount(() => {
     intervalId = setInterval(() => {
-      activeIndex = (activeIndex + 1) % Math.floor(totalItems / per_page);
+      activeIndex = (activeIndex + 1) % totalItems;
     }, duration);
   });
   
@@ -46,7 +47,7 @@
 </script>
 
 <div class="bg-ksblack text-white">
-  <div class="Container BigSection flex flex-col items-center justify-start pt-24">
+  <div class="Container BigSection flex flex-col items-center justify-start py-24">
     <img
       src="/img/decor/french-fries.png"
       alt="french fries"
@@ -89,6 +90,13 @@
           </div>
         {/if}
       {/each}
+    </div>
+
+    <div class="py-12">
+      <CarouselIndicator
+        nItems={parts.length}
+        {activeIndex}
+      />
     </div>
     <div class="md:w-1/2 flex">
       <Banner

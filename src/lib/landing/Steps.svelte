@@ -2,6 +2,7 @@
   import { fly } from "svelte/transition";
   import partition from "$lib/partition";
   import { onDestroy, onMount } from "svelte";
+import CarouselIndicator from "$lib/CarouselIndicator.svelte";
 
   const steps = [
     {
@@ -132,16 +133,11 @@
           {/if}
         {/each}
       </div>
-      
-      <div class="flex items-center justify-center gap-4 py-6 mb-6">
-        {#each partSteps as ps, idx}
-          {#if activeIndex == idx}
-            <div class="w-6 h-2 rounded-lg bg-ksgreen"></div>
-          {:else}
-            <div class="w-2 h-2 rounded-lg bg-white"></div>
-          {/if}
-        {/each}
-      </div>
+
+      <CarouselIndicator
+        nItems={partSteps.length}
+        {activeIndex}
+      />
 
       <button class="mx-auto text-center bg-ksred text-white font-bold px-4 py-2 self-center">
         Create and Order Now
