@@ -14,7 +14,7 @@ const typeUris: Array<Cache> = [
   },
   { 
     type: 'burger',
-    url: 'https://api.npoint.io/7c5d91fdf8c8ad5fc1c8',
+    url: 'https://api.npoint.io/9d107fab207554db4bda',
     cached: false
   },
   {

@@ -7,7 +7,7 @@ import DealsCollection from './DealsCollection.svelte';
   let intervalId: any;
   let activeType: MenuType;
   $: activeType = MenuTypeOptions[activeTabIndex] as MenuType;
-  const changeDuration = 15000;
+  const changeDuration = 5000;
 
   onMount(() => {
     intervalId = setInterval(() => {
