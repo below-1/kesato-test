@@ -1,12 +1,14 @@
 <script lang="ts">
 	import About from '$lib/landing/About.svelte';
 import Banners from '$lib/landing/Banners.svelte';
+	import DealOfTheWeek from '$lib/landing/DealOfTheWeek.svelte';
 	import Features from '$lib/landing/Features.svelte';
 	import Hero from '$lib/landing/Hero.svelte';
 	import NavBar from '$lib/landing/NavBar.svelte';
 	import Recommended from '$lib/landing/Recommended.svelte';
 	import SpecialDeals from '$lib/landing/SpecialDeals.svelte';
 	import Steps from '$lib/landing/Steps.svelte';
+	import TopVideo from '$lib/landing/TopVideo/TopVideo.svelte';
 	import type { Menu, MenuType, PostMetaData } from 'src/types';
 
 	export let highlightPost: PostMetaData;
@@ -14,6 +16,10 @@ import Banners from '$lib/landing/Banners.svelte';
 		firstType: MenuType,
 		firstItems: Array<Menu>
 	};
+	export let recommended: {
+		firstPart: Array<Menu>
+	};
+	export let dealOfTheWeek: Menu;
 </script>
 
 <svelte:head>
@@ -32,8 +38,13 @@ import Banners from '$lib/landing/Banners.svelte';
 	/>
 	<Steps/>
 	<Recommended 
+		firstPart={recommended.firstPart}
 	/>
 	<Banners
 		{highlightPost}
 	/>
+	<DealOfTheWeek
+		menu={dealOfTheWeek}
+	/>
+	<TopVideo/>
 </div>
