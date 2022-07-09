@@ -75,6 +75,16 @@ export class MenuService {
     }
     return this.items.slice(0, n);
   }
+
+  public async getDealOfTheWeek() {
+    const allCached = this.typeMetaData.every(it => it.cached)
+    if (!allCached) {
+      await this.getAll()
+    }
+    const n = this.items.length;
+    const i = Math.floor(Math.random() * n)
+    return this.items[i];
+  }
 }
 
 export default new MenuService();
