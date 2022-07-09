@@ -7,9 +7,13 @@ import Banners from '$lib/landing/Banners.svelte';
 	import Recommended from '$lib/landing/Recommended.svelte';
 	import SpecialDeals from '$lib/landing/SpecialDeals.svelte';
 	import Steps from '$lib/landing/Steps.svelte';
-import type { PostMetaData } from 'src/types';
+	import type { Menu, MenuType, PostMetaData } from 'src/types';
 
 	export let highlightPost: PostMetaData;
+	export let specialDeals: {
+		firstType: MenuType,
+		firstItems: Array<Menu>
+	};
 </script>
 
 <svelte:head>
@@ -22,7 +26,10 @@ import type { PostMetaData } from 'src/types';
 	<Hero/>
 	<About/>
 	<Features/>
-	<SpecialDeals />
+	<SpecialDeals 
+		firstType={specialDeals.firstType}
+		firstItems={specialDeals.firstItems}
+	/>
 	<Steps/>
 	<Recommended 
 	/>
