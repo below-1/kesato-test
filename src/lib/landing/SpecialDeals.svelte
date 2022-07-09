@@ -1,8 +1,8 @@
 <script lang="ts">
   import { onMount, onDestroy } from 'svelte';
-  import Icon, { addIcon } from '@iconify/svelte';
-  import biSuitHeartFill from '@iconify/icons-bi/suit-heart-fill';
-  import biInfoCircleFill from '@iconify/icons-bi/info-circle-fill';
+  import Icon, { addIcon } from '@iconify/svelte/dist/OfflineIcon.svelte';
+  import biSuitHeartFill from '@iconify/icons-bi/suit-heart-fill.js';
+  import biInfoCircleFill from '@iconify/icons-bi/info-circle-fill.js';
   import { page } from "$app/stores";
   import { MenuTypeOptions  } from 'src/types';
   import type { Menu, MenuType } from "src/types";

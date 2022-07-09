@@ -1,8 +1,8 @@
 <script lang="ts">
   import { createEventDispatcher } from 'svelte';
   import { scale } from 'svelte/transition'
-  import Icon, { addIcon } from '@iconify/svelte';
-  import biSearch from '@iconify/icons-bi/search';
+  import Icon, { addIcon } from '@iconify/svelte/dist/OfflineIcon.svelte';
+  import biSearch from '@iconify/icons-bi/search.js';
 
   const dispatch = createEventDispatcher();
 

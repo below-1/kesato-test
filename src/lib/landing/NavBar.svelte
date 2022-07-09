@@ -1,9 +1,8 @@
 <script>
-  import Icon, { addIcon } from '@iconify/svelte';
-  import { fade, scale } from 'svelte/transition';
-  import biCart from '@iconify/icons-bi/cart';
-  import biPerson from '@iconify/icons-bi/person';
-  import biSearch from '@iconify/icons-bi/search';
+  import Icon, { addIcon } from '@iconify/svelte/dist/OfflineIcon.svelte';
+  import biCart from '@iconify/icons-bi/cart.js';
+  import biPerson from '@iconify/icons-bi/person.js';
+  import biSearch from '@iconify/icons-bi/search.js';
   import Delivery from "$lib/icons/delivery.svelte";
   import SearchButton from '$lib/SearchButton.svelte';
 
