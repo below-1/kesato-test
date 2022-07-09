@@ -1,6 +1,6 @@
 import type { RequestHandler } from '@sveltejs/kit'
 import { z } from 'zod';
-import { search } from 'src/serv/menus'
+import menus from 'src/serv/menus'
 import { MenuTypeSchema } from 'src/types';
 
 const SearchParamsSchema = z.object({
@@ -16,10 +16,11 @@ export const get: RequestHandler = async ({ url }) => {
   if (!type) {
     throw new Error('type is undefined')
   }
-  const menus = await search({ type });
+  const items = await menus.getByType(type);
+  // const menus = await search({ type });
   return {
     body: {
-      items: menus
+      items
     }
   }
 }

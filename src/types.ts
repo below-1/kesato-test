@@ -11,6 +11,7 @@ export type Menu = {
   name: string;
   description: string;
   price: string;
+  rating: number;
   avatar: string;
   photo: string;
 }
