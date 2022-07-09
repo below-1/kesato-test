@@ -6,7 +6,7 @@
 </script>
 
 <div class="bg-ksblack text-white">
-  <div class="Container TinySection flex flex-col justify-center">
+  <div class="Container SmallSection flex flex-col justify-center">
     <div class="grid grid-rows-1 grid-cols-1 md:grid-cols-2 gap-2">
       <Banner
         title={highlightPost.title}
