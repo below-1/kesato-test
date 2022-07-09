@@ -1,13 +1,17 @@
 <script lang="ts">
   import { onMount, onDestroy } from "svelte";
   import { fly } from "svelte/transition";
-  import type { Recommended } from "src/types";
+  import type { Menu } from "src/types";
   import { page } from "$app/stores";
   import CarouselIndicator from "$lib/CarouselIndicator.svelte";
 
   export let totalItems = 6;
+  export let firstPart: Array<Menu>;
+
   const per_page = 3;
-  let parts: Array<Array<Recommended> | null> = Array(totalItems).fill(null);
+  let parts: Array<Array<Menu> | null> = Array(totalItems).fill(null);
+  parts[0] = firstPart;
+
   let activeIndex = 0;
   let intervalId: any = null;
   const duration = 5000;
@@ -66,11 +70,12 @@
           >
             {#each part as item}
               <div class="w-full md:w-1/3 flex flex-col">
-                <img 
-                  src={item.photo}
-                  alt="recommended menu"
-                  class="w-full h-auto mb-6"
-                />
+                <div 
+                  class="w-full h-64 mb-6"
+                  style={`background: url(${item.photo}); background-size: cover; background-position: center;`}
+                >
+
+                </div>
                 <p class="font-bold text-xl mb-3">{item.name}</p>
                 <img
                   src="/img/decor/stars.png"
