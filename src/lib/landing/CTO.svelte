@@ -18,18 +18,20 @@
       class="h-4 mb-12"
       alt="wave"
     />
-    <div class="bg-white flex items-center rounded space-x-6 px-4 w-full md:w-3/5">
-      <img
-        src="/img/icons/email.png"
-        class="h-4"
-        alt="email icon"
-      />
-      <input
-        class="flex-grow bg-white text-sm py-5 text-black"
-        style="outline: none;"
-        placeholder="Enter your email address..."
-      />
-      <button class="uppercase font-bold text-sm bg-ksred px-4 py-2">
+    <div class="bg-white flex flex-wrap md:flex-nowrap rounded gap-2 md:p-4 p-2 w-full md:w-3/5">
+      <div class="flex items-center flex-grow border rounded">
+        <img
+          src="/img/icons/email.png"
+          class="h-4 mx-4"
+          alt="email icon"
+        />
+        <input
+          class="flex-grow bg-white text-sm py-3 text-black"
+          style="outline: none;"
+          placeholder="Enter your email address..."
+        />
+      </div>
+      <button class="w-full md:w-auto flex-grow md:flex-grow-0 uppercase font-bold text-sm bg-ksred px-4 py-2">
         subscribe now!
       </button>
     </div>

@@ -31,8 +31,8 @@ import Footer from '$lib/landing/Footer.svelte';
 </script>
 
 <svelte:head>
-	<title>Kesato Tasty -- Order Today</title>
-	<meta name="description" content="Kesato Tasty Food" />
+	<title>Spedito -- Order Today</title>
+	<meta name="description" content="Spedito Tasty Food" />
 </svelte:head>
 
 <div>
