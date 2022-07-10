@@ -31,9 +31,9 @@ import SideVideoLink from "./SideVideoLink.svelte";
       </p>
     </div>
 
-    <div class="flex items-center space-x-6">
+    <div class="flex flex-wrap md:flex-nowrap items-center space-x-6">
 
-      <div class="md:w-1/3 space-y-12 text-right">
+      <div class="md:w-1/3 space-y-12 text-center md:text-left">
 
         <SideVideoLink
           icon='/img/icons/video-1.svg'
@@ -53,11 +53,11 @@ import SideVideoLink from "./SideVideoLink.svelte";
 
       </div>
 
-      <div>
+      <div class="hidden md:block">
         <CenterCircle/>
       </div>
 
-      <div class="md:w-1/3 space-y-12">
+      <div class="md:w-1/3 space-y-12 text-center md:text-left">
         <SideVideoLink
           icon='/img/icons/video-1.svg'
           title="Certified Pure Oil"

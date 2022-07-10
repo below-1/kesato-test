@@ -16,8 +16,8 @@
 </style>
 
 <div class="Outer" style={style}>
-  <div class="Container SmallSection flex py-12">
-    <div class="md:w-1/2 text-white flex flex-col justify-center">
+  <div class="Container SmallSection flex flex-wrap-reverse md:flex-nowrap py-12">
+    <div class="w-full md:w-1/2 text-white flex flex-col justify-center items-center md:items-start text-center md:text-left">
       <div class="flex items-center mb-6">
         <div class="font-bold text-ksgreen mr-2">Deal Of The Week</div>
         <img
@@ -32,11 +32,11 @@
         <p class="mr-3">Per Serving</p>
         <p class="font-bold text-ksred text-xl">{menu.price.toFixed(2)}$</p>
       </div>
-      <button class="bg-ksred text-white font-bold px-4 py-2 self-start">
+      <button class="bg-ksred text-white font-bold px-4 py-2">
         Order Now
       </button>
     </div>
-    <div class="md:w-1/2 flex justify-center">
+    <div class="w-full md:w-1/2 flex justify-center">
       <img
         src={menu.avatar}
         alt="deal of the week"

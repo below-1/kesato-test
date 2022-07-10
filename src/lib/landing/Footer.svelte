@@ -29,22 +29,22 @@
       class="h-24 self-center"
       alt="spedito"
     />
-    <div class="flex flex-grow items-center text-center">
-      <div class="md:w-1/3 flex flex-col items-center">
+    <div class="flex flex-grow flex-wrap md:flex-nowrap items-center text-center">
+      <div class="w-full md:w-1/3 flex flex-col items-center">
         <p class="font-bold mb-3">Our Address</p>
         <div class="border-b border-[#555] w-6 mb-6"></div>
         <div class="text-xs leading-relaxed">
           430, Barfield Lane, Indianapolis, <br/> CA 46278, USA
         </div>
       </div>
-      <div class="md:w-1/3 flex flex-col items-center">
+      <div class="w-full md:w-1/3 flex flex-col items-center">
         <p class="font-bold mb-3">Opening Hours</p>
         <div class="border-b border-[#555] w-6 mb-6"></div>
         <div class="text-xs leading-relaxed">
           Mon - Sat 10:00 AM - 11:30 PM <br/> Sun 9:00 AM - 4:00 PM
         </div>
       </div>
-      <div class="md:w-1/3 flex flex-col items-center">
+      <div class="w-full md:w-1/3 flex flex-col items-center">
         <p class="font-bold mb-3">Contact Us</p>
         <div class="border-b border-[#555] w-6 mb-6"></div>
         <div class="text-xs leading-relaxed">
@@ -66,7 +66,7 @@
         </a>
       {/each}
     </div>
-    <p class="text-xs self-center">&copy; Copyright 2020 Spedito. All rights reserved. 
+    <p class="text-xs self-center text-center">&copy; Copyright 2020 Spedito. All rights reserved. 
         <a href="/terms" class="underline text-gray-600">Terms And Condition</a>
     </p>
   </div>

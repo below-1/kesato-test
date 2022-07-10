@@ -68,26 +68,48 @@
             in:fly={{ y: 0, x: 200 }}
             out:fly={{ y: 0, x: -200 }}
           >
-            {#each part as item}
-              <div class="w-full md:w-1/3 flex flex-col">
-                <div 
-                  class="w-full h-64 mb-6"
-                  style={`background: url(${item.photo}); background-size: cover; background-position: center;`}
-                >
+            {#each part as item, itemIndex}
+              {#if itemIndex == 0}
+                <div class="w-full md:w-1/3 flex flex-col">
+                  <div 
+                    class="w-full h-64 mb-6"
+                    style={`background: url(${item.photo}); background-size: cover; background-position: center;`}
+                  >
 
+                  </div>
+                  <p class="font-bold text-xl mb-3">{item.name}</p>
+                  <img
+                    src="/img/decor/stars.png"
+                    class="h-3 self-start mb-4"
+                    alt="stars"
+                  />
+                  <p class="text-xs">{item.description.substring(0, 100)}...</p>
+                  <div class="py-4 flex items-center gap-2 font-display">
+                    <span>price:</span>
+                    <span class="text-ksred text-xl">${item.price.toFixed(2)}</span>
+                  </div>
                 </div>
-                <p class="font-bold text-xl mb-3">{item.name}</p>
-                <img
-                  src="/img/decor/stars.png"
-                  class="h-3 self-start mb-4"
-                  alt="stars"
-                />
-                <p class="text-xs">{item.description.substring(0, 100)}...</p>
-                <div class="py-4 flex items-center gap-2 font-display">
-                  <span>price:</span>
-                  <span class="text-ksred text-xl">${item.price.toFixed(2)}</span>
+              {:else}
+                <div class="w-full md:w-1/3 flex-col hidden md:flex">
+                  <div 
+                    class="w-full h-64 mb-6"
+                    style={`background: url(${item.photo}); background-size: cover; background-position: center;`}
+                  >
+
+                  </div>
+                  <p class="font-bold text-xl mb-3">{item.name}</p>
+                  <img
+                    src="/img/decor/stars.png"
+                    class="h-3 self-start mb-4"
+                    alt="stars"
+                  />
+                  <p class="text-xs">{item.description.substring(0, 100)}...</p>
+                  <div class="py-4 flex items-center gap-2 font-display">
+                    <span>price:</span>
+                    <span class="text-ksred text-xl">${item.price.toFixed(2)}</span>
+                  </div>
                 </div>
-              </div>
+              {/if}
             {/each}
           </div>
         {/if}

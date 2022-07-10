@@ -21,9 +21,9 @@
       alt="burgerwave"
       class="w-12 mb-6 self-center"
     />
-    <div class="flex flex-grow self-stetch gap-3">
+    <div class="flex flex-grow flex-wrap md:flex-nowrap self-stretch gap-3">
       {#each blogs as blog}
-        <div class="md:w-1/3">
+        <div class="md:w-1/3 w-full">
           <img
             src={blog.photo}
             class="w-full h-auto"

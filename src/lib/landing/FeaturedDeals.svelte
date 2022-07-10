@@ -4,12 +4,12 @@
 </script>
 
 <div class="bg-ksblack">
-  <div class="TinySection flex space-x-3 py-12">
+  <div class="TinySection flex flex-wrap md:flex-nowrap gap-3 py-12">
     {#each deals as menu}
       <a 
         href={`/menus/${menu.id}`}
-        class="md:w-1/3 self-stretch"
-        style={`background-image: url(${menu.photo});`}
+        class="w-full md:w-1/3 h-64 md:h-auto"
+        style={`background-image: url(${menu.photo}); background-position: center; background-size: cover;`}
       >
       </a>
     {/each}

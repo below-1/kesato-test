@@ -28,23 +28,16 @@ import CarouselIndicator from "$lib/CarouselIndicator.svelte";
   ]
 
   const partSteps = partition(steps, 3);
-  console.log(partSteps);
 
   let activeIndex = 0;
+  let mobileActiveIndex = 0;
   let intervalId: any;
   const duration = 5000;
 
   onMount(() => {
     intervalId = setInterval(() => {
       activeIndex = (activeIndex + 1) % 2;
-      if (!document) {
-        return;
-      }
-      const ps = document.getElementsByClassName("PartStep");
-      const outer = document.getElementsByClassName("Outer");
-      if (!outer.length || !ps.length) {
-        return;
-      }
+      mobileActiveIndex = (mobileActiveIndex + 1) % steps.length;
     }, duration);
   })
 
@@ -102,7 +95,7 @@ import CarouselIndicator from "$lib/CarouselIndicator.svelte";
     </div>
     <div class="flex flex-col w-full md:w-3/4">
 
-      <div class="Outer relative overflow-hidden h-64">
+      <div class="hidden md:block Outer relative overflow-hidden h-64">
 
         {#each partSteps as ps, partIndex}
           {#if partIndex == activeIndex}
@@ -134,10 +127,48 @@ import CarouselIndicator from "$lib/CarouselIndicator.svelte";
         {/each}
       </div>
 
-      <CarouselIndicator
-        nItems={partSteps.length}
-        {activeIndex}
-      />
+      <div class="block md:hidden Outer relative overflow-hidden h-64">
+
+        {#each steps as step, partIndex}
+          {#if partIndex == mobileActiveIndex}
+            <div 
+              class="PartStep absolute flex flex-wrap text-white w-full"
+              in:fly={{ y: 0, x: 200 }}
+              out:fly={{ y: 0, x: -200 }}
+            >
+              <div class="md:w-1/3 flex flex-col px-8">
+                <div class="flex justify-between items-center pr-16 mb-6">
+                  <img
+                    src={step.image}
+                    alt="pizza-step"
+                    class="h-[90%]"
+                  />
+                  <img
+                    src="/img/decor/custome-arrow.svg"
+                    alt="customer-arrow"
+                  />
+                </div>
+                <p class="text-ksgreen mb-3">step {partIndex + 1}</p>
+                <p class="font-bold mb-1">{step.title}</p>
+                <p class="text-sm">{step.description}</p>
+              </div>
+            </div>
+          {/if}
+        {/each}
+      </div>
+
+      <div class="hidden md:block">
+        <CarouselIndicator
+          nItems={partSteps.length}
+          {activeIndex}
+        />
+      </div>
+      <div class="block md:hidden">
+        <CarouselIndicator
+          nItems={steps.length}
+          activeIndex={mobileActiveIndex}
+        />
+      </div>
 
       <button class="mx-auto text-center bg-ksred text-white font-bold px-4 py-2 self-center">
         Create and Order Now

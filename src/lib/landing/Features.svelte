@@ -27,7 +27,6 @@
     background: url(/img/pages/home/bg_features.jpg);
     background-size: cover;
     background-position: center;
-    position: relative;
   }
   .DecorFeatures {
     position: absolute;
@@ -47,19 +46,19 @@
   }
 </style>
 
-<div class="Features">
+<div class="Features static md:relative">
   <div 
-    class="Container SmallSection flex justify-start items-center"
+    class="Container SmallSection py-12 md:py-none flex flex-wrap md:flex-nowrap gap-6 justify-start items-center"
   >
     {#each features as feat}
-      <div class="w-1/3 flex flex-col justify-between leading-none">
-        <img src={feat.icon} alt="feature-icon" class="h-24 self-start mb-4">
+      <div class="w-full md:w-1/3 flex flex-col justify-center items-center md:items-start leading-none text-left md:text-center">
+        <img src={feat.icon} alt="feature-icon" class="h-32 mb-4">
         <img 
           src='/img/decor/wawe.svg' 
           alt="waves" 
           class="w-16"
         />
-        <div class="pt-8">
+        <div class="pt-8 text-center md:text-left">
           <p class="font-bold text-white text-xl mb-3">{feat.title}</p>
           <p class="text-white font-normal">{feat.description}</p>
         </div>

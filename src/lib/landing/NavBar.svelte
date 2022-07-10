@@ -32,11 +32,11 @@
 </style>
 
 <nav class="bg-ksblack w-full flex items-center">
-  <div class="md:w-3/4 md:mx-auto h-20 flex items-center">
+  <div class="w-full md:w-3/4 md:mx-auto h-20 flex items-center px-4 md:px-none">
     
     <div class="flex items-center text-white gap-x-4">
       <Delivery />
-      <div>
+      <div class="hidden md:block">
         <div class="text-sm">For delivery, call us</div>
         <div class="font-semibold text-ksred">1-320-544-8749</div>
       </div>
@@ -67,7 +67,7 @@
       {/each}
       <button 
         type="button"
-        class="bg-ksred px-4 py-2 font-semibold text-white transition-all focus:font-black"
+        class="hidden md:block bg-ksred px-4 py-2 font-semibold text-white transition-all focus:font-black"
       >
         Make Your Pizza
       </button>

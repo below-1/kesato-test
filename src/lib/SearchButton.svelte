@@ -48,7 +48,7 @@
   }
 </style>
 
-<div class="flex grow items-center justify-end px-2 gap-x-2">
+<div class="flex flex-grow items-center justify-end px-2 gap-x-2">
   <div 
     class="SearchInput grow transition-all "
     class:Show={inputVisible}

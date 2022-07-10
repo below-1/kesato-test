@@ -42,7 +42,7 @@
             {#each part as post}
               <a
                 href={post.image}
-                class="md:w-1/5 h-full flex"
+                class="w-1/5 h-full flex"
                 style={`background-image: url(${post.image}); background-size: cover; background-position: center;`}
               >
               </a>

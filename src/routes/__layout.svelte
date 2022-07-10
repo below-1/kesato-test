@@ -3,6 +3,6 @@
 	import '../app.css';
 </script>
 
-<main class="font-body">
+<main class="font-body bg-ksblack text-white">
 	<slot></slot>
 </main>
