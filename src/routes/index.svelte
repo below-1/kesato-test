@@ -5,12 +5,16 @@
 	import DealOfTheWeek from '$lib/landing/DealOfTheWeek.svelte';
 	import Features from '$lib/landing/Features.svelte';
 	import Hero from '$lib/landing/Hero.svelte';
+	import Instagram from '$lib/landing/Instagram.svelte';
 	import NavBar from '$lib/landing/NavBar.svelte';
 	import Recommended from '$lib/landing/Recommended.svelte';
 	import SpecialDeals from '$lib/landing/SpecialDeals.svelte';
+	import FeaturedDealsSect from '$lib/landing/FeaturedDeals.svelte';
 	import Steps from '$lib/landing/Steps.svelte';
 	import TopVideo from '$lib/landing/TopVideo/TopVideo.svelte';
-	import type { Menu, MenuType, PostMetaData } from 'src/types';
+	import type { IgPost, Menu, MenuType, PostMetaData, FeaturedDeals } from 'src/types';
+import RecentBlogs from '$lib/landing/RecentBlogs.svelte';
+import Footer from '$lib/landing/Footer.svelte';
 
 	export let highlightPost: PostMetaData;
 	export let specialDeals: {
@@ -21,6 +25,9 @@
 		firstPart: Array<Menu>
 	};
 	export let dealOfTheWeek: Menu;
+	export let igPosts: Array<IgPost>;
+	export let featuredDeals: FeaturedDeals;
+	export let recentBlogs: Array<PostMetaData>;
 </script>
 
 <svelte:head>
@@ -49,4 +56,12 @@
 	/>
 	<TopVideo/>
 	<Cto />
+
+	<FeaturedDealsSect
+		deals={featuredDeals}
+	/>
+	<RecentBlogs blogs={recentBlogs} />
+	<Instagram posts={igPosts}/>
+
+	<Footer />
 </div>

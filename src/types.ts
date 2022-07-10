@@ -16,15 +16,6 @@ export type Menu = {
   photo: string;
 }
 
-export type Recommended = {
-  id: string;
-  rating: number;
-  name: string;
-  description: string;
-  price: number;
-  photo: string;
-}
-
 export type PostMetaData = {
   id: string;
   title: string;
@@ -35,3 +26,10 @@ export type PostMetaData = {
 }
 
 export type PostContent = Array<string>;
+
+export type IgPost = {
+  image: string;
+  tags: Array<string>;
+}
+
+export type FeaturedDeals = [Menu, Menu, Menu];

@@ -1,4 +1,4 @@
-import { MenuTypeOptions, type Menu, type MenuType } from "src/types";
+import { MenuTypeOptions, type FeaturedDeals, type Menu, type MenuType } from "src/types";
 
 type Cache = {
   type: MenuType;
@@ -84,6 +84,18 @@ export class MenuService {
     const n = this.items.length;
     const i = Math.floor(Math.random() * n)
     return this.items[i];
+  }
+
+  public async getFeaturedDeals(): Promise<FeaturedDeals> {
+    const allCached = this.typeMetaData.every(it => it.cached)
+    if (!allCached) {
+      await this.getAll()
+    }
+    const n = this.items.length;
+    if (n < 3) {
+      throw new Error('featured deals must be 3')
+    }
+    return this.items.slice(0, 3) as FeaturedDeals;
   }
 }
 
