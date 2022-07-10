@@ -61,6 +61,14 @@ export class MenuService {
     return this.items.filter(it => it.type == type);
   }
 
+  public async getById(id: string) {
+    const allCached = this.typeMetaData.every(it => it.cached)
+    if (!allCached) {
+      await this.getAll()
+    }
+    return this.items.find(it => it.id == id);
+  }
+
   protected async getAll() {
     const proms = Promise.all(
       MenuTypeOptions.map(type => this.getByType(type as MenuType))

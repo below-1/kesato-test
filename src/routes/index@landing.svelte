@@ -1,7 +1,7 @@
 <script lang="ts">
 	import About from '$lib/landing/About.svelte';
 	import Banners from '$lib/landing/Banners.svelte';
-	import Cto from '$lib/landing/CTO.svelte';
+	import Cto from '$lib/CTO.svelte';
 	import DealOfTheWeek from '$lib/landing/DealOfTheWeek.svelte';
 	import Features from '$lib/landing/Features.svelte';
 	import Hero from '$lib/landing/Hero.svelte';
@@ -13,8 +13,8 @@
 	import Steps from '$lib/landing/Steps.svelte';
 	import TopVideo from '$lib/landing/TopVideo/TopVideo.svelte';
 	import type { IgPost, Menu, MenuType, PostMetaData, FeaturedDeals } from 'src/types';
-import RecentBlogs from '$lib/landing/RecentBlogs.svelte';
-import Footer from '$lib/landing/Footer.svelte';
+	import RecentBlogs from '$lib/landing/RecentBlogs.svelte';
+	import Footer from '$lib/Footer.svelte';
 
 	export let highlightPost: PostMetaData;
 	export let specialDeals: {

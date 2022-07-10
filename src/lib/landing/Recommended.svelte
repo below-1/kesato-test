@@ -70,7 +70,10 @@
           >
             {#each part as item, itemIndex}
               {#if itemIndex == 0}
-                <div class="w-full md:w-1/3 flex flex-col">
+                <a 
+                  href={`/menus/${item.id}`}
+                  class="w-full md:w-1/3 flex flex-col"
+                >
                   <div 
                     class="w-full h-64 mb-6"
                     style={`background: url(${item.photo}); background-size: cover; background-position: center;`}
@@ -88,9 +91,12 @@
                     <span>price:</span>
                     <span class="text-ksred text-xl">${item.price.toFixed(2)}</span>
                   </div>
-                </div>
+                </a>
               {:else}
-                <div class="w-full md:w-1/3 flex-col hidden md:flex">
+                <a 
+                  href={`/menus/${item.id}`}
+                  class="w-full md:w-1/3 flex-col hidden md:flex"
+                >
                   <div 
                     class="w-full h-64 mb-6"
                     style={`background: url(${item.photo}); background-size: cover; background-position: center;`}
@@ -108,7 +114,7 @@
                     <span>price:</span>
                     <span class="text-ksred text-xl">${item.price.toFixed(2)}</span>
                   </div>
-                </div>
+                </a>
               {/if}
             {/each}
           </div>
