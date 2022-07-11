@@ -1,3 +1,7 @@
+<script lang="ts">
+  export let url: string;
+</script>
+
 <style>
   .ClippedBanner {
     clip-path: ellipse(60% 12% at 50% 0%);
@@ -44,7 +48,9 @@
 
         <p class="mb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla pulvinar suscipit augue, vel scelerisque est euismod a. Curabitur iaculis fermentum magna non iaculis. Phasellus eget arcu a odio fermentum varius sit amet ut augue. Fusce diam magna, molestie ut ex non, elementum maximus justo. </p>
         <p class="mb-3">Mauris efficitur arcu dolor. Mauris in massa sodales erat dapibus rhoncus ac et nibh. Vestibulum quis elit vulputate, sollicitudin erat quis, tempus mi</p>
-        <button class="text-white bg-ksred px-4 py-2 mt-6">read more</button>
+        <a 
+          href={url} 
+          class="text-white bg-ksred px-4 py-2 mt-6">read more</a>
       </div>
     </div>
 

@@ -25,8 +25,7 @@ import HeroCarousel from "./HeroCarousel.svelte";
     <h1 class="text-6xl font-display">Order Today, While It's Hot!</h1>
     <h2 class="text-xl">Eat Delicious & Tasty Fast-Foods With Real Flavours</h2>
     <a
-      role="button"
-      href="/menus"
+      href="/menus/"
       class="bg-ksred px-4 py-2 my-6"
     >
       View Our Menu

@@ -15,8 +15,8 @@
   let searchInputVisible = false;
 
   const menus = [
-    { icon: 'person', path: '/account' },
-    { icon: 'cart', path: '/cart' }
+    { icon: 'person', path: '#' },
+    { icon: 'cart', path: '#' }
   ]
 </script>
 

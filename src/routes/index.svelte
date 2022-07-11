@@ -1,3 +1,7 @@
+<script lang="ts" context="module">
+	export  const prerender = true;
+</script>
+
 <script lang="ts">
 	import About from '$lib/landing/About.svelte';
 	import Banners from '$lib/landing/Banners.svelte';
@@ -6,7 +10,7 @@
 	import Features from '$lib/landing/Features.svelte';
 	import Hero from '$lib/landing/Hero.svelte';
 	import Instagram from '$lib/landing/Instagram.svelte';
-	import NavBar from '$lib/landing/NavBar.svelte';
+	import NavBar from '$lib/NavBar.svelte';
 	import Recommended from '$lib/landing/Recommended.svelte';
 	import SpecialDeals from '$lib/landing/SpecialDeals.svelte';
 	import FeaturedDealsSect from '$lib/landing/FeaturedDeals.svelte';
@@ -35,10 +39,12 @@
 	<meta name="description" content="Spedito Tasty Food" />
 </svelte:head>
 
-<div>
+<main class="font-body bg-ksblack text-white">
 	<NavBar/>
 	<Hero/>
-	<About/>
+	<About
+		url={`/posts/${highlightPost.id}`}
+	/>
 	<Features/>
 	<SpecialDeals 
 		firstType={specialDeals.firstType}
@@ -64,4 +70,4 @@
 	<Instagram posts={igPosts}/>
 
 	<Footer />
-</div>
+</main>

@@ -1,7 +1,11 @@
+<script lang="ts" context="module">
+	export  const prerender = true;
+</script>
+
 <script lang="ts">
   import { goto } from "$app/navigation";
   import { page } from "$app/stores";
-import MenuCard from "$lib/MenuCard.svelte";
+  import MenuCard from "$lib/MenuCard.svelte";
 
   import PageHeader from "$lib/PageHeader.svelte";
   import TypeSelect from "$lib/TypeSelect.svelte";

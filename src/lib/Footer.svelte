@@ -67,7 +67,7 @@
       {/each}
     </div>
     <p class="text-xs self-center text-center">&copy; Copyright 2020 Spedito. All rights reserved. 
-        <a href="/terms" class="underline text-gray-600">Terms And Condition</a>
+        <a href="/" class="underline text-gray-600">Terms And Condition</a>
     </p>
   </div>
 </div>
